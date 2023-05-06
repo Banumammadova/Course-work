@@ -1,0 +1,88 @@
+{
+    "operator": "Azercell",
+    "plans": [
+      {
+        "name": "Azercell SIM-SIM 1",
+        "price": "5 AZN",
+        "data": "2 GB",
+        "validity": "30 days",
+        "voice_minutes": "500",
+        "sms": "500",
+        "international_call_rates": {
+          "usa_canada": "0.25 AZN/min",
+          "russia": "0.45 AZN/min",
+          "turkey": "0.50 AZN/min"
+        },
+        "features": [
+          "Unlimited Azercell-to-Azercell calls",
+          "Free subscription to Gigabytes music streaming service",
+          "Roll-over data"
+        ],
+        "join_code":"*340*1#yes"
+      },
+      {
+        "name": "Azercell SIM-SIM 2",
+        "price": "10 AZN",
+        "data": "4 GB",
+        "validity": "30 days",
+        "voice_minutes": "1000",
+        "sms": "1000",
+        "international_call_rates": {
+          "usa_canada": "0.20 AZN/min",
+          "russia": "0.40 AZN/min",
+          "turkey": "0.45 AZN/min"
+        },
+        "features": [
+          "Unlimited Azercell-to-Azercell calls",
+          "Free subscription to Gigabytes music streaming service",
+          "Roll-over data",
+          "Free WhatsApp usage"
+        ],
+        "join_code":"*340*2#yes"
+      },
+      {
+        "name": "Azercell SIM-SIM 3",
+        "price": "15 AZN",
+        "data": "8 GB",
+        "validity": "30 days",
+        "voice_minutes": "2000",
+        "sms": "2000",
+        "international_call_rates": {
+          "usa_canada": "0.15 AZN/min",
+          "russia": "0.35 AZN/min",
+          "turkey": "0.40 AZN/min"
+        },
+        "features": [
+          "Unlimited Azercell-to-Azercell calls",
+          "Free subscription to Gigabytes music streaming service",
+          "Roll-over data",
+          "Free WhatsApp usage",
+          "Free Facebook Messenger usage"
+        ],
+        "join_code":"*340*3#yes"
+      },
+      {
+        "name": "Azercell SIM-SIM 4",
+        "price": "20 AZN",
+        "data": "12 GB",
+        "validity": "30 days",
+        "voice_minutes": "3000",
+        "sms": "3000",
+        "international_call_rates": {
+          "usa_canada": "0.10 AZN/min",
+          "russia": "0.30 AZN/min",
+          "turkey": "0.35 AZN/min"
+        },
+        "features": [
+          "Unlimited Azercell-to-Azercell calls",
+          "Free subscription to Gigabytes music streaming service",
+          "Roll-over data",
+          "Free WhatsApp usage",
+          "Free Facebook Messenger usage",
+          "Free 3 GB Night Bonus data between 02:00-08:00"
+        ],
+        "join_code":"*340*4#yes"
+      }
+    ]
+  }
+  

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telephone Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar-right {
+        display: flex;
+        flex-direction: row;
+      }
+      .navbar-left{
+        display: flex;
+        flex-direction: row;      
+      }
+      .navbar-left i{
+        margin: 18% 15%;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #333;
+        width: 100%;
+        height: 8vw;
+      }
+      .navbar a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 3px 10px;
+        text-decoration: none;
+        background-color: #333;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .containers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        margin-bottom: 50px;
+      }
+      .container {
+        width: 40%;
+        height: 100px;
+        background-color: #021155;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px;
+      }
+      .container a{
+        color: white;
+      }
+      .container:hover {
+        background-color: black;
+      }
+      .container a:hover{
+        color: white;
+      }
+      #contact {
+        background-color: rgb(179, 181, 202);
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      #contact h2 {
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 40%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: inherit;
+      }
+
+      button[type="submit"] {
+        margin: 20px auto;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #021155;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .contact-info {
+        margin-top: 52px;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+
+      .contact-info i {
+        margin-right: 10px;
+      }
+      @media only screen and (max-width: 1120px) {
+        .navbar{
+          height: 17vh;
+        }
+      }
+      @media only screen and (max-width: 672px) {
+        .navbar{
+          zoom: 80%;
+        }
+      }
+      @media only screen and (max-width: 468px) {
+        .navbar{
+          zoom: 55%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+      <i class="fa-solid fa-phone fa-beat fa-2xl" style="color: white">941</i>
+      <h1 style="color: white; margin-left: 1%; font-size: 26px; display:inline-block;">Telephone Services</h1>
+       
+    </div>
+      <div class="navbar-right">
+        <a href="login.html">Login</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="container">
+        <a style="text-decoration: none" href="bakcell.html">Bakcell</a>
+      </div>
+      <div class="container">
+        <a style="text-decoration: none" href="azercell.html">Azercell</a>
+      </div>
+      <div class="container">
+        <a style="text-decoration: none" href="nar.html">Nar</a>
+      </div>
+    </div>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> +1 555-555-5555</p>
+        <p><i class="fas fa-envelope"></i> info@example.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown USA</p>
+      </div>
+    </section>
+  </body>
+</html>

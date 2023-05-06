@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <style>
+      body {
+        margin: 10%;
+        background-color: #f2f2f2;
+        overflow-y: hidden;
+      }
+
+      #login-form {
+        color: white;
+        background-color: #021155;
+        text-align: center;
+        width: 400px;
+        margin: 50px auto;
+        border-radius: 5px;
+        padding: 60px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      input[type="phone"] {
+        width: 60%;
+        padding: 10px;
+        margin: 0 auto 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        width: 50%;
+        padding: 10px;
+        background-color: #1d40ca;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="login-form">
+      <h1>Login</h1>
+      <label for="phone">Phone Number:</label>
+      <input type="phone" id="phone" name="phone" autocomplete="off" />
+      <button type="submit">Login</button>
+    </form>
+    <script>
+      const form = document.getElementById("login-form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        fetch("user_data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const users = data.users;
+            const phone = document.getElementById("phone").value;
+            let phoneNumberFound = false;
+            users.forEach((user) => {
+              if (user.number == phone) {
+                window.location.href = "private_profil.html";
+                sessionStorage.setItem("phone", phone);
+                phoneNumberFound = true;
+                return;
+              }
+            });
+            if (!phoneNumberFound) {
+              form.innerHTML = "";
+              const errorMessage = document.createElement("p");
+              errorMessage.textContent = "Invalid phone number";
+              form.appendChild(errorMessage);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

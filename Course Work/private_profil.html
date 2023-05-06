@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Account</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+        overflow-y: hidden;
+      }
+      .navbar-right {
+        display: flex;
+        flex-direction: row;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #021155;
+        width: 100%;
+      }
+      .navbar a {
+        color: white;
+        text-align: center;
+        padding: 20px 20px;
+        margin: 5px 20px;
+        text-decoration: none;
+        background-color:#021155;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 850px;
+        margin: 2% 7%;
+        padding: 2rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      #profile p {
+        margin: 0.5rem 0;
+      }
+
+      #profile p span {
+        font-weight: bold;
+      }
+
+      #plan-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .plan-item {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .plan-item:hover {
+        background-color: #cac3c5;
+      }
+
+      .plan-item h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .plan-item p {
+        margin: 0;
+        font-size: 1rem;
+        color: #000000;
+      }
+
+      .plan-item span {
+        font-weight: bold;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1 style="color: white; margin-left: 1%">My Account</h1>
+      <div class="navbar-right">
+        <a href="https://hesab.az/unregistered/#/direct-pay/mobile/merchants"
+          >Pay</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="img">
+        <img src="profil picture.png" alt="Not found!" height="300px" width="300px" />
+      </div>
+      <div>
+        <section id="profile">
+          <h2 style="color:rgb(255, 0, 0)">Profile</h2>
+          <p>Operator: <span id="operator"></span></p>
+          <p>Name: <span id="name"></span></p>
+          <p>Surname: <span id="surname"></span></p>
+          <p>Number: <span id="number"></span></p>
+          <p>Balance: <span id="balance"></span></p>
+          <p>Internet: <span id="internet"></span></p>
+          <p>Start using: <span id="date"></span></p>
+        </section>
+        <section id="plans">
+          <h2 style="color:rgb(255, 0, 0)">My Plans</h2>
+          <ul><li id="plan-list" style="list-style-type:square;"></li></ul>
+        </section>
+        <p style="color:red"><i><b>-You can learn with details in operator's main page!</b></i></p>
+      </div>
+    </main>
+    <script>
+      const operatorElement = document.getElementById("operator");
+      const nameElement = document.getElementById("name");
+      const surnameElement = document.getElementById("surname");
+      const numberElement = document.getElementById("number");
+      const balanceElement = document.getElementById("balance");
+      const internetElement = document.getElementById("internet");
+      const dateElement = document.getElementById("date");
+      const planList = document.getElementById("plan-list");
+
+      fetch("user_data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const users = data.users;
+          users.forEach((user) => {
+            if(user.number==sessionStorage.getItem("phone")){
+            operatorElement.textContent=user.operator
+            nameElement.textContent = user.name;
+            surnameElement.textContent = user.surname;
+            numberElement.textContent = user.number;
+            balanceElement.textContent = user.balans;
+            internetElement.textContent = user.internet;
+            dateElement.textContent=user.start_using;
+            planList.textContent=user.plan
+            }
+          });
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bakcell</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Poltawski+Nowy:ital,wght@1,600&display=swap");
+      body {
+        font-family: "Poltawski Nowy", serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .container {
+        padding: 2.5rem 2rem;
+        background-color: #e00034;
+        display: flex;
+        align-items: center;
+      }
+      #navbar {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #333;
+        width: 100%;
+      }
+      #navbar a {
+        color: white;
+        text-align: center;
+        padding: 20px 20px;
+        margin: 5px 10px;
+        text-decoration: none;
+        background-color: #333;
+      }
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      h1 {
+        text-align: start;
+        color: #333;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-left: 2.3rem;
+      }
+
+      #plan-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem auto;
+        width: 95%;
+      }
+
+      #plan-list li {
+        border: 1px solid #ccc;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      #plan-list li:hover {
+        background-color: #cac3c5;
+      }
+
+      #plan-list li h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #333;
+      }
+
+      #plan-list li p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #000000;
+      }
+      #plan-list li pre {
+        font-family: "Poltawski Nowy", serif;
+        margin: 0;
+        font-size: 1.2rem;
+        color: #000000;
+      }
+
+      #plan-list li p strong:first-child {
+        font-weight: bold;
+        color: #a00606;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="bakcell_balance.html">Balance</a>
+      <a href="https://hesab.az/unregistered/#/direct-pay/mobile/merchants"
+        >Pay</a
+      >
+    </div>
+    <div class="container">
+      <img src="bakcell.png" height="130px" width="240px" />
+    </div>
+    <h1>Bakcell Phone Plans</h1>
+    <ul id="plan-list"></ul>
+
+    <script>
+      fetch("bakcell.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const plans = data.plans;
+          const planList = document.getElementById("plan-list");
+
+          plans.forEach((plan) => {
+            const planItem = document.createElement("li");
+            planItem.innerHTML = `
+        <h2>${plan.name}</h2>
+        <p><strong>Price:</strong> ${plan.price}</p>
+        <p><strong>Data:</strong> ${plan.data}</p>
+        <p><strong>Validity:</strong> ${plan.validity}</p>
+        <p><strong>Voice Minutes:</strong> ${plan.voice_minutes}</p>
+        <p><strong>SMS:</strong> ${plan.sms}</p>
+        <p><strong>International Call Rates:</strong></p>
+        <pre>
+        <strong>USA-Canada:</strong> ${plan.international_call_rates.usa_canada}
+        <strong>Russia:</strong> ${plan.international_call_rates.russia}
+        <strong>Turkey:</strong> ${plan.international_call_rates.turkey}</pre>
+        <p><strong>Features:</strong> ${plan.features}</p>
+        <p><strong>For joining:</strong> ${plan.join_code}</p>
+      `;
+            planList.appendChild(planItem);
+          });
+        });
+    </script>
+  </body>
+</html>

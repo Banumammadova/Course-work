@@ -1,0 +1,83 @@
+{
+    "users": [
+      {
+        "number": "0559568759",
+        "operator": "Bakcell",
+        "name": "Rəsul",
+        "surname": "Ağayev",
+        "balans":"2.45 AZN",
+        "kredit_borcu":"0.00 AZN",
+        "internet":"0.00 MB",
+        "start_using":"12-02-2021",
+        "plan":"Bakcell SIM-SIM 3"
+      },
+      {
+        "number": "0502256429",
+        "operator": "Azercell",
+        "name": "Aygün",
+        "surname": "Əliyeva",
+        "balans":"0.00 AZN",
+        "kredit_borcu":"0.50 AZN",
+        "internet":"0.56 MB",
+        "start_using":"10-05-2006",
+        "plan":"Azercell SIM-SIM 1"
+      },
+      {
+        "number": "0775236875",
+        "operator": "Nar",
+        "name": "Nicat",
+        "surname": "Quliyev",
+        "balans":"3.20 AZN",
+        "kredit_borcu":"0.00 AZN",
+        "internet":"105 MB",
+        "start_using":"09-08-2016",
+        "plan":"Nar Gosha 4"
+        },
+      {
+        "number": "0702468924",
+        "operator": "Nar",
+        "name": "Heydər",
+        "surname": "Bayramov",
+        "balans":"0.19 AZN",
+        "kredit_borcu":"0.00 AZN",
+        "internet":"0.00 MB",
+        "start_using":"01-01-2023",
+        "plan":"Nar Gosha 1"
+      },
+      {
+        "number": "0509978760",
+        "operator": "Azercell",
+        "name": "Əli",
+        "surname": "Kərimov",
+        "balans":"0.00 AZN",
+        "kredit_borcu":"0.20 AZN",
+        "internet":"5.50 GB",
+        "start_using":"26-04-2009",
+        "plan":"Azercell SIM-SIM 3"
+      },
+      {
+        "number": "0992465891",
+        "operator": "Bakcell",
+        "name": "Reyhan",
+        "surname": "Kərimli",
+        "balans":"2.05 AZN",
+        "kredit_borcu":"0.00 AZN",
+        "internet":"0.60 MB",
+        "start_using":"18-06-2019",
+        "plan":"Bakcell SIM-SIM 2"
+      },
+      {
+        "number": "0104567895",
+        "operator": "Azercell",
+        "name": "Gülzar",
+        "surname": "Rzayeva",
+        "balans":"5.56 AZN",
+        "kredit_borcu":"0.00 AZN",
+        "internet":"0.00 MB",
+        "start_using":"07-06-2020",
+        "plan":"Azercell SIM-SIM 4"
+      }
+    ]
+}
+
+  

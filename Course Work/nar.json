@@ -1,0 +1,83 @@
+{
+  "operator": "Nar",
+  "plans": [
+    {
+      "name": "Nar Gosha 1",
+      "price": "5 AZN",
+      "data": "3 GB",
+      "validity": "30 days",
+      "voice_minutes": "500",
+      "sms": "500",
+      "international_call_rates": {
+        "usa_canada": "0.25 AZN/min",
+        "russia": "0.45 AZN/min",
+        "turkey": "0.50 AZN/min"
+      },
+      "features": [
+        "Unlimited Nar-to-Nar calls",
+        "Roll-over data"
+      ],
+      "join_code":"*770*1#yes"
+    },
+    {
+      "name": "Nar Gosha 2",
+      "price": "10 AZN",
+      "data": "5 GB",
+      "validity": "30 days",
+      "voice_minutes": "1000",
+      "sms": "1000",
+      "international_call_rates": {
+        "usa_canada": "0.20 AZN/min",
+        "russia": "0.40 AZN/min",
+        "turkey": "0.45 AZN/min"
+      },
+      "features": [
+        "Unlimited Nar-to-Nar calls",
+        "Roll-over data",
+        "Free subscription to Bookmate reading service"
+      ],
+      "join_code":"*770*2#yes"
+    },
+    {
+      "name": "Nar Gosha 3",
+      "price": "15 AZN",
+      "data": "10 GB",
+      "validity": "30 days",
+      "voice_minutes": "2000",
+      "sms": "2000",
+      "international_call_rates": {
+        "usa_canada": "0.15 AZN/min",
+        "russia": "0.35 AZN/min",
+        "turkey": "0.40 AZN/min"
+      },
+      "features": [
+        "Unlimited Nar-to-Nar calls",
+        "Roll-over data",
+        "Free subscription to Bookmate reading service",
+        "Free WhatsApp and Facebook Messenger usage"
+      ],
+      "join_code":"*770*3#yes"
+    },
+    {
+      "name": "Nar Gosha 4",
+      "price": "25 AZN",
+      "data": "20 GB",
+      "validity": "30 days",
+      "voice_minutes": "unlimited",
+      "sms": "unlimited",
+      "international_call_rates": {
+        "usa_canada": "0.10 AZN/min",
+        "russia": "0.30 AZN/min",
+        "turkey": "0.35 AZN/min"
+      },
+      "features": [
+        "Unlimited Nar-to-Nar calls",
+        "Roll-over data",
+        "Free subscription to Bookmate reading service",
+        "Free WhatsApp and Facebook Messenger usage",
+        "Free 10 GB Night Bonus data between 02:00-08:00"
+      ],
+      "join_code":"*770*3#yes"
+    }
+  ]
+}
